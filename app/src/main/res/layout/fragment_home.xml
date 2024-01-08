@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+ <ImageView
+     android:id="@+id/fap"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:src="@drawable/fapfap"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     android:layout_margin="@dimen/vertical"
+     />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/app"
+        android:layout_margin="@dimen/vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apliacacion de IoT"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/fap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Julio Cesar"
+        app:layout_constraintEnd_toStartOf="@id/Apellido"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/vertical"
+        app:layout_constraintTop_toBottomOf="@id/app"
+        android:textColor="@color/Azul"
+        />
+    <TextView
+        android:id="@+id/Apellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vasquez Alvarez"
+        android:textColor="@color/Verde"
+        app:layout_constraintStart_toEndOf="@id/Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/vertical"
+        app:layout_constraintTop_toBottomOf="@id/app"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Practicas: "
+            android:textColor="@color/Gris"
+
+            app:layout_constraintTop_toBottomOf="@id/Nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/vertical"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>
